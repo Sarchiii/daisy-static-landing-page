@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url(./Daisy_Pattern-DaisyField_Enamel.svg);
+  background-repeat: no-repeat;
+  background-size: 180%;
+  background-position: center;
+  background-color: #36ac4e;
 }
 
 .App-logo {
@@ -7,25 +12,40 @@
   pointer-events: none;
 }
 
+.Bloom-logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: transparent;  */
+  /* opacity: 0.5; makes entire background image transparent */
+}
+
+.Footer {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  min-width: 10em;
+  justify-content: space-around;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
+  }e
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #36ac4e; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
