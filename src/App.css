@@ -1,15 +1,32 @@
+@font-face {
+  font-family: "Catalpa";
+  src: url("./assets/fonts/Catalpa-Extrabold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter18pt-SemiBold.woff2") format("woff2");
+}
+
 .App {
   text-align: center;
-  background-image: url(./Daisy_Pattern-DaisyField_Enamel.svg);
+  background-image: url(./Daisy_Pattern-DaisyField_Pine.svg);
   background-repeat: no-repeat;
   background-size: 180%;
   background-position: center;
   background-color: #36ac4e;
+  background-size: clamp(180%, 50vw, 400%);
+  transition: background-size 0.5s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(40px + 2vmin);
+  color: white;
 }
 
 .Bloom-logo {
@@ -20,39 +37,30 @@
   /* opacity: 0.5; makes entire background image transparent */
 }
 
-.Footer {
-  /* border: 1px solid black; */
+.Coming-soon {
+  font-family: "Catalpa";
+  color: #fefbe4;
   display: flex;
-  flex-direction: row;
+}
+
+.Footer {
+  color: #fefbe4;
   font-size: 12px;
   min-width: 10em;
-  justify-content: space-around;
-  margin-right: 3px;
-  margin-bottom: 3px;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-family: "optional";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }e
+.Presented {
+  font-family: "Catalpa";
+  margin-right: 0.25rem;
 }
 
-.App-header {
-  /* background-color: #36ac4e; */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .App {
+    background-size: cover; /* background-size: 180%; or whatever size tiles cleanly */
+    background-size: 400%;
   }
 }
